@@ -14,7 +14,7 @@ Route::group([
 
 /*rutas Users*/
 /* Route::get('/user', [UserController::class, 'index']); */
-Route::get('/v1/diimo/user', [UserController::class, 'index']);
+Route::get('/user', [UserController::class, 'index']);
 Route::get('/user/{id}', [UserController::class, 'show']);
 Route::delete('/user/{id}', [UserController::class, 'destroy']);
 Route::put('/user/{id}', [UserController::class, 'update']);
