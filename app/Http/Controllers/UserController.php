@@ -1,4 +1,4 @@
-<?php   
+<?php
 namespace App\Http\Controllers;
 
     use App\Models\User;
@@ -20,7 +20,7 @@ class UserController extends Controller
         return User::all();
     }
 
-     //Obtenemos un registro especifico que se encuentra almacenado 
+     //Obtenemos un registro especifico que se encuentra almacenado
      //en nuestra base de datos por medio del id.
     public function show($id)
     {
@@ -30,7 +30,7 @@ class UserController extends Controller
     //Esta función es la que realiza la autenticacion con nuestro email y password.
     public function authenticate(Request $request)
     {
-        //realiza la busqueda para solamente encontrar el email y password 
+        //realiza la busqueda para solamente encontrar el email y password
         //y asi realizar la validacion para que genere un token de lo contrario
         //mostrara que las credenciales no son válidas.
         $credentials = $request->only('email', 'password');
@@ -77,7 +77,7 @@ class UserController extends Controller
         }
     }
 
-    //Verifica el usuario que se encuentra validado y asi tambien verifica 
+    //Verifica el usuario que se encuentra validado y asi tambien verifica
     //si el token aun es valido o ya ha sido eliminado.
     public function getAuthenticatedUser()
     {
@@ -119,7 +119,7 @@ class UserController extends Controller
                 'phone' => $request->phone,
                 'date_of_birth' => $request->date_of_birth,
             ]);
-              //Aqui lo que hace es obtener el usuario y validarlo para asi asignarle un token. 
+              //Aqui lo que hace es obtener el usuario y validarlo para asi asignarle un token.
             $token = JWTAuth::fromUser($user);
              //y dicho token se retorna para ser mostrado y verificar cual es el token asignado.
             return response()->json(compact('user','token'),201);
@@ -127,7 +127,7 @@ class UserController extends Controller
 
 
         //Modificar los registros almacenados en nuestra BD y d eigual manera tiene sus respectivas validaciones
-        //para que los datos sean modificados de manera exitosa. 
+        //para que los datos sean modificados de manera exitosa.
         public function update(Request $request, $id)
     {
 
@@ -152,7 +152,7 @@ class UserController extends Controller
         return $user;
     }
 
-    //De igua manera contiene su función para eliminar algun usuario. 
+    //De igua manera contiene su función para eliminar algun usuario.
     public function destroy($id)
     {
         $user = User::findOrFail($id);
@@ -177,11 +177,11 @@ class UserController extends Controller
             Mail::to($request->email)->send(new RecoverPassword($request->email, $token));
             return response()->json('Send successfully');
         }
-        
+
     }
 
-    // Función para modificar campo de recovery password en 15 minutos. 
-    public function modify_recover_password(request $request){
+    // Función para modificar campo de recovery password en 15 minutos.
+    public function time_recover_password(request $request){
         $created_at = User::where('email',$request->email)->value('created_at');
         if (now() > $created_at->addMinutes(15)) {
             $id = User::where('email',$request->email)->value('id');
@@ -192,7 +192,7 @@ class UserController extends Controller
         }else{
             return response(['message' => trans('passwords.code_has_not_expired_yet')], 422);
         }
-        
-    } 
+
+    }
 
 }

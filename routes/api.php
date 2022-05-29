@@ -14,6 +14,7 @@ Route::group([
 
 /*rutas Users*/
 /* Route::get('/user', [UserController::class, 'index']); */
+Route::get('/v1/diimo/user', [UserController::class, 'index']);
 Route::get('/user/{id}', [UserController::class, 'show']);
 Route::delete('/user/{id}', [UserController::class, 'destroy']);
 Route::put('/user/{id}', [UserController::class, 'update']);
@@ -34,9 +35,6 @@ Route::post('/v1/diimo/login', [UserController::class, 'authenticate']);
 Route::post('/v1/diimo/register', [UserController::class, 'register']);
 Route::post('/v1/diimo/logout', [UserController::class, 'logout']);
 
-Route::get('/v1/diimo/user', [UserController::class, 'index']);
-
-
 //rutas recuperacion de password
 Route::post('/v1/diimo/recover_password', [UserController::class, 'recover_password']);
-Route::post('/v1/diimo/modify_recover_password', [UserController::class, 'modify_recover_password']);
+Route::post('/v1/diimo/time_recover_password', [UserController::class, 'time_recover_password']);
