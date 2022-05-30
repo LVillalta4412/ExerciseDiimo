@@ -26,6 +26,11 @@ class UserController extends Controller
     {
         return User::where('id',$id)->get();
     }
+ //Obtener token para verificar si aun existe
+    public function SearchToken($token)
+    {
+        return User::where('remember_token',$token)->get();
+    }
 
     //Esta función es la que realiza la autenticacion con nuestro email y password.
     public function authenticate(Request $request)
