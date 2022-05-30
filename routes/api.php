@@ -33,7 +33,7 @@ Route::put('/products/image/{id}', [ProductsController::class, 'updateImage']);
 //rutas para login, register y logout.
 Route::post('/v1/diimo/login', [UserController::class, 'authenticate']);
 Route::post('/v1/diimo/register', [UserController::class, 'register']);
-Route::post('/v1/diimo/logout', [UserController::class, 'logout']);
+Route::post('/v1/diimo/logout/{token}', [UserController::class, 'logout']);
 
 //rutas recuperacion de password
 Route::post('/v1/diimo/update_password/{token}', [UserController::class, 'updatePassword']);
