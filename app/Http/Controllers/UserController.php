@@ -46,9 +46,7 @@ class UserController extends Controller
     }
 
     //Esta función es para eliminar el token al momento de cerrar sesión.
-    public function logout( Request $request ) {
-
-        $token = $request->header( 'Authorization' );
+    public function logout( $token ) {
 
         try {
             JWTAuth::parseToken()->invalidate( $token );
