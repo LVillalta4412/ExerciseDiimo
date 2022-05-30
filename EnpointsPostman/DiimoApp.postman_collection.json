@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "ec9e0680-23c7-4ce5-b1d5-36eba6c627c5",
+		"name": "DiimoApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14078528"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/user",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/user/1",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/register",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/user/1",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/user/1",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/products/1",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/products/search/hola",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"products",
+								"search",
+								"hola"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/products",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/products",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/products/1",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put image products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/products/image/1",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"products",
+								"image",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete products",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/products/1",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Post login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/login",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/logout/token",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"logout",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recover password",
+			"item": [
+				{
+					"name": "Get token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/searchtoken/token",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"searchtoken",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post new password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/update_password/token",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"update_password",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post recover password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/recover_password",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"recover_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post time recover password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://exercisediimo.herokuapp.com/api/v1/diimo/time_recover_password/token",
+							"protocol": "https",
+							"host": [
+								"exercisediimo",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"diimo",
+								"time_recover_password",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
