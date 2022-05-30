@@ -217,8 +217,6 @@ class UserController extends Controller
             $user -> remember_token = null;
             $user ->update();
             return response(['message' => trans('passwords.token_is_expire')], 200);
-        }else{
-            return response(['message' => trans('passwords.code_has_not_expired_yet')], 422);
         }
 
     }
