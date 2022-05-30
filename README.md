@@ -21,3 +21,5 @@ La aplicación esta deployada en heroku aunque algunas rutas no funcionaran ya q
 https://exercisediimo.herokuapp.com/api/v1/diimo/
 
 este es el endpoint principal.
+
+Tambien mencionar que la parte de envio de correos estoy utilizando Mailtrap para pruebas, Asi que los mensajes me llegan dentro de la plataforma para obtener el enlace de recuperacion de password. Si en caso se necesita obtener acceso para una mejor verificacion, notificarmelo por favor paa brindar credenciales.
