@@ -16,7 +16,7 @@ class ProductsController extends Controller
         return Products::all();
     }
 
-    //Aqui es donde realizo el insert en la base de datos. 
+    //Aqui es donde realizo el insert en la base de datos.
     public function store(Request $request)
     {
     //Aqui es donde realizo la validacion antes de almacenar los datos.
@@ -39,7 +39,7 @@ class ProductsController extends Controller
         'description' => $request->description,
         'image' => $request->imagen,
        ]);
-       //Hago el retorno de los datos almacenados para que se me muestren y 
+       //Hago el retorno de los datos almacenados para que se me muestren y
        //verificar que si se almaceno todo de manera correcta
         return $product;
     }
@@ -53,7 +53,6 @@ class ProductsController extends Controller
     //En esta parte actualizo los datos que ya estan almacenados en la BD.
     public function update(Request $request, $id)
     {
-
         //Aqui es donde realizo la validacion antes de almacenar los datos.
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
@@ -64,17 +63,16 @@ class ProductsController extends Controller
         // entonces me muestra el siguiente JSON
         if($validator->fails()){
                 return response()->json($validator->errors()->toJson(), 400);
-
+         }
         $product = Products::findOrFail($id);
         $product -> sku = $request->sku;
         $product -> name = $request->name;
         $product -> quantity = $request->quantity;
         $product -> price = $request->price;
         $product -> description = $request->description;
-        $product -> image = $request->image;
         $product ->update();
         return $product;
-    }
+
 }
 
     //Aqui es donde procederemos a eliminar los datos por medio del id.
@@ -90,6 +88,6 @@ class ProductsController extends Controller
     {
             return Products::where('name','LIKE' , '%' . $filter . '%')
             ->orWhere('sku', 'LIKE' , '%' . $filter . '%')->get();
-        
+
     }
 }
