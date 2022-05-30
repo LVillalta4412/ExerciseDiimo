@@ -22,6 +22,9 @@
 </head>
 <body>
 
-{{$email}} {{$token}}
+<p>Puedes acceder al enlace para recuperar tu contraseña.</p>
+<p>Solamente tienes 15 minutos para reestablecerla.</p>
+
+https://exercisediimo.web.app/auth/forgot-password/{{$token}}
 </body>
 </html>
