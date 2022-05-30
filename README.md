@@ -15,3 +15,9 @@ para arrancar el proyecto ejecutamos en nuestra terminal el comando:
 -php artisan serve.
 
 y eso bastaría para arrancar el proyecto.
+
+La aplicación esta deployada en heroku aunque algunas rutas no funcionaran ya que estan dentro del jwt.
+
+https://exercisediimo.herokuapp.com/api/v1/diimo/
+
+este es el endpoint principal.
