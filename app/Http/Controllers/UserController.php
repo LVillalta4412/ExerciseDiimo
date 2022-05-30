@@ -178,33 +178,40 @@ class UserController extends Controller
 
    // Función para recuperar contraseña
     public function recover_password(request $request){
-        $remember_token = User::where('email',$request->email)->value('remember_token');
-        if(!$remember_token){
-            $token = Str::random(25);
-            $id = User::where('email',$request->email)->value('id');
-            $user = User::findOrFail($id);
-            $user -> remember_token = $token;
-            $user -> created_at = now();
-            $user ->update();
-            Mail::to($request->email)->send(new RecoverPassword($request->email, $token));
-            return response()->json('Send successfully');
+        $email = User::where('email',$request->email)->value('email');
+        if (!$email){
+            return response()->json('Email not exists', 400);
         }else{
-            $token = User::where('email',$request->email)->value('remember_token');
-            Mail::to($request->email)->send(new RecoverPassword($request->email, $token));
-            return response()->json('Send successfully');
+            $remember_token = User::where('email',$request->email)->value('remember_token');
+            if(!$remember_token){
+                $token = Str::random(25);
+                $id = User::where('email',$request->email)->value('id');
+                $user = User::findOrFail($id);
+                $user -> remember_token = $token;
+                $user -> created_at = now();
+                $user ->update();
+                Mail::to($request->email)->send(new RecoverPassword($request->email, $token));
+                return response()->json('Send successfully');
+            }else{
+                $token = User::where('email',$request->email)->value('remember_token');
+                Mail::to($request->email)->send(new RecoverPassword($request->email, $token));
+                return response()->json('Send successfully');
+            }
         }
+
 
     }
 
     // Función para modificar campo de recovery password en 15 minutos.
-    public function time_recover_password(request $request){
-        $created_at = User::where('email',$request->email)->value('created_at');
+    public function time_recover_password($token){
+        $email = User::where('remember_token',$token)->value('email');
+        $created_at = User::where('email',$email)->value('created_at');
         if (now() > $created_at->addMinutes(15)) {
-            $id = User::where('email',$request->email)->value('id');
+            $id = User::where('email',$email)->value('id');
             $user = User::findOrFail($id);
             $user -> remember_token = null;
             $user ->update();
-            return response(['message' => trans('passwords.token_is_expire')], 422);
+            return response(['message' => trans('passwords.token_is_expire')], 200);
         }else{
             return response(['message' => trans('passwords.code_has_not_expired_yet')], 422);
         }

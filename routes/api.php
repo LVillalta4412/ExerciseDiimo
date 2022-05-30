@@ -38,4 +38,4 @@ Route::post('/v1/diimo/logout/{token}', [UserController::class, 'logout']);
 //rutas recuperacion de password
 Route::post('/v1/diimo/update_password/{token}', [UserController::class, 'updatePassword']);
 Route::post('/v1/diimo/recover_password', [UserController::class, 'recover_password']);
-Route::post('/v1/diimo/time_recover_password', [UserController::class, 'time_recover_password']);
+Route::post('/v1/diimo/time_recover_password/{token}', [UserController::class, 'time_recover_password']);
