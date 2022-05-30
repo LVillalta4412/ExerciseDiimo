@@ -35,3 +35,6 @@ migrations database:
 2019_12_14_000001_create_personal_access_tokens_table
 
 2022_05_27_171931_create_products_table
+
+La database y los endpoints de postman estan en carpeta en este proyecto. Est
+La database en una carpeta llamada bd y la api en EndpointsPostman.
