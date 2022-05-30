@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-//Añadimos la clase JWTSubject 
+//Añadimos la clase JWTSubject
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
@@ -22,9 +22,9 @@ class User extends Authenticatable implements JWTSubject
         'password',
         'phone',
         'date_of_birth',
-        'created_at',
+        'created_at'
     ];
-    
+
     protected $hidden = [
         'password',
         'remember_token',
