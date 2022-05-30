@@ -23,3 +23,15 @@ https://exercisediimo.herokuapp.com/api/v1/diimo/
 este es el endpoint principal.
 
 Tambien mencionar que la parte de envio de correos estoy utilizando Mailtrap para pruebas, Asi que los mensajes me llegan dentro de la plataforma para obtener el enlace de recuperacion de password. Si en caso se necesita obtener acceso para una mejor verificacion, notificarmelo por favor paa brindar credenciales.
+
+migrations database:
+
+2014_10_12_000000_create_users_table
+
+2014_10_12_100000_create_password_resets_table
+
+2019_08_19_000000_create_failed_jobs_table
+
+2019_12_14_000001_create_personal_access_tokens_table
+
+2022_05_27_171931_create_products_table
