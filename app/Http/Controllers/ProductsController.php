@@ -75,6 +75,16 @@ class ProductsController extends Controller
 
 }
 
+//En esta parte actualizo la imagen
+public function updateImage(Request $request, $id)
+{
+    $product = Products::findOrFail($id);
+    $product -> image = $request->image;
+    $product ->update();
+    return $product;
+
+}
+
     //Aqui es donde procederemos a eliminar los datos por medio del id.
     public function destroy($id)
     {

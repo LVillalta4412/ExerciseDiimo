@@ -27,7 +27,7 @@ Route::get('/products/{id}', [ProductsController::class, 'show']);
 Route::post('/products', [ProductsController::class, 'store']);
 Route::delete('/products/{id}', [ProductsController::class, 'destroy']);
 Route::put('/products/{id}', [ProductsController::class, 'update']);
-
+Route::put('/products/image/{id}', [ProductsController::class, 'updateImage']);
 });
 
 //rutas para login, register y logout.
