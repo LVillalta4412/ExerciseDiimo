@@ -152,6 +152,24 @@ class UserController extends Controller
         return $user;
     }
 
+    //Esta parte es para modificar solamente el password
+    public function updatePassword(Request $request, $token)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'password' => 'required|string|max:255'
+        ]);
+
+        if($validator->fails()){
+                return response()->json($validator->errors()->toJson(), 400);
+        }
+        $id = User::where('remember_token',$token)->value('id');
+        $user = User::findOrFail($id);
+        $user -> password = Hash::make($request->password);
+        $user ->update();
+        return $user;
+    }
+
     //De igua manera contiene su función para eliminar algun usuario.
     public function destroy($id)
     {
